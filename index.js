@@ -29,12 +29,11 @@ const eventData = [
     venue: "台北小巨蛋",
     location: "台北市松山區",
     price: "NT$2,800 - NT$8,800",
-    ticketUrl: "https://www.ticketmaster.tw/",
     description: "NewJeans 首次來台演出！將帶來全新舞台設計和經典曲目表演。包含《Get Up》、《Super Shy》等熱門歌曲。",
     status: "預售中",
     category: "concert",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   
   {
@@ -46,11 +45,10 @@ const eventData = [
     venue: "Olympic Hall",
     location: "首爾奧林匹克公園",
     price: "KRW 150,000 - KRW 350,000",
-    ticketUrl: "https://www.melon.com/",
     description: "Lisa 個人活動後首次粉絲見面會，將分享新音樂作品和與粉絲互動遊戲。",
     status: "售票中",
     category: "fanmeeting",
-    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   
   {
@@ -62,11 +60,10 @@ const eventData = [
     venue: "高雄巨蛋",
     location: "高雄市左營區",
     price: "NT$3,200 - NT$9,800",
-    ticketUrl: "https://www.kktix.cc/",
     description: "SEVENTEEN 睽違三年再度來台！全新專輯歌曲首演，預計演出3小時精彩內容。",
     status: "即將開售",
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   
   {
@@ -78,11 +75,10 @@ const eventData = [
     venue: "AsiaWorld-Expo",
     location: "香港機場",
     price: "HK$880 - HK$2,880",
-    ticketUrl: "https://www.ticketflap.com/",
     description: "aespa 最新專輯發片會，將首度表演新歌《Armageddon》等曲目。",
     status: "預售中",
     category: "showcase",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   
   {
@@ -94,11 +90,10 @@ const eventData = [
     venue: "Suntec Convention Centre",
     location: "新加坡市中心",
     price: "S$180 - S$480",
-    ticketUrl: "https://www.sistic.com.sg/",
     description: "IVE 東南亞首場粉絲見面會，包含遊戲環節和專屬表演舞台。",
     status: "售票中",
     category: "fanmeeting",
-    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   
   {
@@ -110,11 +105,10 @@ const eventData = [
     venue: "大佳河濱公園",
     location: "台北市中山區",
     price: "NT$1,800 - NT$5,500",
-    ticketUrl: "https://www.indievox.com/",
     description: "夏日韓流音樂節，邀請 ITZY、(G)I-DLE、NMIXX 等多組藝人共同演出。",
     status: "售票中",
     category: "festival",
-    imageUrl: "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   
   {
@@ -126,11 +120,10 @@ const eventData = [
     venue: "信義區快閃店",
     location: "台北市信義區",
     price: "免費入場",
-    ticketUrl: "#",
     description: "TWICE 主題快閃咖啡廳，限定商品販售和拍照區域，為期兩週。",
     status: "進行中",
     category: "popup",
-    imageUrl: "https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #a8caba 0%, #5d4e75 100%)"
   },
   
   {
@@ -142,11 +135,10 @@ const eventData = [
     venue: "華山1914創意文化園區",
     location: "台北市中正區",
     price: "NT$350",
-    ticketUrl: "https://www.udn.com/",
     description: "STRAY KIDS 互動式展覽，展示MV製作過程、服裝和周邊商品。",
     status: "預售中",
     category: "exhibition",
-    imageUrl: "https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
+    gradient: "linear-gradient(135deg, #a8caba 0%, #5d4e75 100%)"
   }
 ];
 
@@ -376,43 +368,63 @@ app.get('/', (req, res) => {
             /* Event Grid */
             .events-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 1.5rem;
             }
             
             .event-card {
                 background: white;
                 border-radius: 12px;
-                overflow: hidden;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.05);
                 transition: all 0.3s ease;
-                cursor: pointer;
                 border: 1px solid #f3f4f6;
+                position: relative;
             }
             
             .event-card:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             }
             
-            .card-image {
-                width: 100%;
-                height: 180px;
-                background-size: cover;
-                background-position: center;
+            .card-header {
+                height: 120px;
+                background: #4facfe;
+                background: var(--gradient);
                 position: relative;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+            
+            .card-header-content {
+                text-align: center;
+            }
+            
+            .card-date {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 0.25rem;
+            }
+            
+            .card-month {
+                font-size: 0.9rem;
+                opacity: 0.9;
             }
             
             .card-badge {
                 position: absolute;
                 top: 1rem;
                 left: 1rem;
-                background: rgba(255,255,255,0.9);
-                color: #1f2937;
+                background: rgba(255,255,255,0.2);
+                color: white;
                 padding: 0.25rem 0.75rem;
                 border-radius: 12px;
                 font-size: 0.75rem;
                 font-weight: 600;
+                backdrop-filter: blur(10px);
             }
             
             .status-badge {
@@ -423,8 +435,9 @@ app.get('/', (req, res) => {
                 border-radius: 12px;
                 font-size: 0.75rem;
                 font-weight: 600;
-                background: #22c55e;
+                background: rgba(255,255,255,0.2);
                 color: white;
+                backdrop-filter: blur(10px);
             }
             
             .card-content {
@@ -468,20 +481,30 @@ app.get('/', (req, res) => {
                 margin-bottom: 1rem;
             }
             
-            .ticket-btn {
-                width: 100%;
-                background: #3b82f6;
-                color: white;
-                border: none;
-                padding: 0.75rem;
-                border-radius: 8px;
-                font-weight: 600;
-                cursor: pointer;
-                transition: background 0.3s ease;
+            .info-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                margin-top: 1rem;
             }
             
-            .ticket-btn:hover {
-                background: #2563eb;
+            .info-item {
+                background: #f8fafc;
+                padding: 0.75rem;
+                border-radius: 8px;
+                text-align: center;
+            }
+            
+            .info-label {
+                font-size: 0.75rem;
+                color: #6b7280;
+                margin-bottom: 0.25rem;
+            }
+            
+            .info-value {
+                font-weight: 600;
+                color: #1f2937;
+                font-size: 0.9rem;
             }
             
             /* Responsive */
@@ -528,15 +551,10 @@ app.get('/', (req, res) => {
                 </div>
                 
                 <nav class="nav-links">
-                    <a href="#" class="nav-link active">首頁</a>
-                    <a href="#" class="nav-link">演出</a>
-                    <a href="#" class="nav-link">活動</a>
-                    <a href="#" class="nav-link">藝人</a>
+                    <span class="nav-link active">首頁</span>
+                    <span class="nav-link">演出活動</span>
+                    <span class="nav-link">藝人排程</span>
                 </nav>
-                
-                <div class="header-actions">
-                    <span>🎤</span>
-                </div>
             </div>
         </header>
         
@@ -560,8 +578,8 @@ app.get('/', (req, res) => {
                 </h2>
                 
                 ${featuredEvent ? `
-                <div class="event-showcase" onclick="openTicketLink('${featuredEvent.ticketUrl}')">
-                    <div class="event-image" style="background-image: url('${featuredEvent.imageUrl}')">
+                <div class="event-showcase">
+                    <div class="event-image" style="background: ${featuredEvent.gradient}">
                         <div class="event-badge">${featuredEvent.artist}</div>
                     </div>
                     <div class="event-content">
@@ -601,26 +619,43 @@ app.get('/', (req, res) => {
                 </h2>
                 
                 <div class="events-grid" id="eventsGrid">
-                    ${upcomingEvents.map(event => `
-                        <div class="event-card" data-category="${event.category}" onclick="openTicketLink('${event.ticketUrl}')">
-                            <div class="card-image" style="background-image: url('${event.imageUrl}')">
+                    ${upcomingEvents.map(event => {
+                        const eventDate = new Date(event.date);
+                        const day = eventDate.getDate();
+                        const month = eventDate.toLocaleDateString('zh-TW', {month: 'short'});
+                        
+                        return `
+                        <div class="event-card" data-category="${event.category}" style="--gradient: ${event.gradient}">
+                            <div class="card-header" style="background: ${event.gradient}">
                                 <div class="card-badge">${categories.find(cat => cat.id === event.category)?.name || '活動'}</div>
                                 <div class="status-badge">${event.status}</div>
+                                <div class="card-header-content">
+                                    <div class="card-date">${day}</div>
+                                    <div class="card-month">${month}</div>
+                                </div>
                             </div>
                             <div class="card-content">
                                 <div class="card-artist">${event.artist}</div>
                                 <h3 class="card-title">${event.title}</h3>
                                 <div class="card-details">
-                                    <span>📅 ${event.date}</span>
                                     <span>⏰ ${event.time}</span>
                                     <span>📍 ${event.venue}</span>
                                     <span>🌏 ${event.location}</span>
                                 </div>
                                 <div class="card-price">${event.price}</div>
-                                <button class="ticket-btn">購票資訊</button>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <div class="info-label">演出日期</div>
+                                        <div class="info-value">${event.date}</div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-label">演出時間</div>
+                                        <div class="info-value">${event.time}</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    `).join('')}
+                        </div>`;
+                    }).join('')
                 </div>
             </section>
         </main>
@@ -669,13 +704,10 @@ app.get('/', (req, res) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             
-            // 開啟購票連結
-            function openTicketLink(url) {
-                if (url && url !== '#') {
-                    window.open(url, '_blank');
-                } else {
-                    alert('購票資訊即將公布，請關注官方消息！');
-                }
+            // 演出詳情顯示
+            function showEventDetails(eventId) {
+                // 未來可以展示更多詳情
+                console.log('查看演出詳情:', eventId);
             }
             
             // 載入完成初始化
