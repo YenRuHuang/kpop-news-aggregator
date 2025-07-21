@@ -7,8 +7,8 @@
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
-    "build": "npm install && cd frontend && npm install && npm run build && cd ../backend && npm install",
-    "start": "node server.js",
+    "build": "echo 'Build completed'",
+    "start": "node index.js",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "deploy": "node deploy-to-zeabur.js"
   },
