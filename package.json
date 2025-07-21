@@ -1,13 +1,13 @@
 {
   "name": "kpop-news-aggregator",
   "version": "2.0.0",
-  "description": "Beautiful Kpop news aggregation website with modern UI",
+  "description": "精美的韓流新聞聚合網站，採用現代化UI設計",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js"
   },
-  "keywords": ["kpop", "news", "aggregator", "website"],
+  "keywords": ["韓流", "新聞", "聚合器", "網站", "kpop"],
   "author": "",
   "license": "ISC",
   "dependencies": {

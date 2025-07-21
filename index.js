@@ -6,34 +6,61 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.static('public'));
 
-// Mock RSS data for demo
+// 模擬韓流新聞數據
 const mockNews = [
   {
     id: 1,
-    title: "NewJeans Announces Comeback Date",
-    source: "Soompi",
+    title: "NewJeans 正式公布回歸日期",
+    source: "韓流新聞網",
     publishedAt: "2025-07-21T10:00:00Z",
-    summary: "Girl group NewJeans has officially announced their comeback date...",
+    summary: "女團 NewJeans 正式宣布回歸日期，粉絲期待已久的新專輯即將發行...",
     url: "https://soompi.com",
-    tags: ["NewJeans", "Comeback"]
+    tags: ["NewJeans", "回歸"]
   },
   {
     id: 2,
-    title: "BTS Breaks New Chart Record",
-    source: "AllKPop",
+    title: "BTS 再創新榜單紀錄",
+    source: "AllKPop 中文版",
     publishedAt: "2025-07-21T09:30:00Z",
-    summary: "BTS continues to dominate international charts...",
+    summary: "BTS 持續在國際榜單上取得亮眼成績，再次證明韓流音樂的全球影響力...",
     url: "https://allkpop.com",
-    tags: ["BTS", "Chart"]
+    tags: ["BTS", "榜單"]
   },
   {
     id: 3,
-    title: "BLACKPINK Lisa's Solo Success",
-    source: "Soompi",
+    title: "BLACKPINK Lisa 個人活動大獲成功",
+    source: "韓流新聞網",
     publishedAt: "2025-07-21T08:15:00Z",
-    summary: "Lisa's latest solo project achieves massive success...",
+    summary: "Lisa 最新個人項目取得巨大成功，展現了 BLACKPINK 成員的個人魅力...",
     url: "https://soompi.com",
-    tags: ["BLACKPINK", "Lisa", "Solo"]
+    tags: ["BLACKPINK", "Lisa", "個人活動"]
+  },
+  {
+    id: 4,
+    title: "aespa 新歌 MV 突破千萬觀看",
+    source: "韓流速報",
+    publishedAt: "2025-07-21T07:45:00Z",
+    summary: "SM 娛樂旗下女團 aespa 新歌 MV 在 24 小時內突破千萬觀看次數...",
+    url: "https://example.com",
+    tags: ["aespa", "MV", "紀錄"]
+  },
+  {
+    id: 5,
+    title: "SEVENTEEN 演唱會門票秒殺",
+    source: "娛樂週刊",
+    publishedAt: "2025-07-21T06:30:00Z",
+    summary: "SEVENTEEN 亞洲巡迴演唱會門票開售即秒殺，再次展現超高人氣...",
+    url: "https://example.com",
+    tags: ["SEVENTEEN", "演唱會", "門票"]
+  },
+  {
+    id: 6,
+    title: "IVE 獲得音樂節目三冠王",
+    source: "韓流新聞網",
+    publishedAt: "2025-07-21T05:15:00Z",
+    summary: "新生代女團 IVE 憑藉最新單曲在音樂節目中獲得三冠王殊榮...",
+    url: "https://example.com",
+    tags: ["IVE", "音樂節目", "冠軍"]
   }
 ];
 
@@ -44,7 +71,7 @@ app.get('/', (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>🎵 Kpop News Aggregator</title>
+        <title>🎵 韓流新聞聚合器</title>
         <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { 
@@ -165,40 +192,32 @@ app.get('/', (req, res) => {
                 font-weight: bold;
                 display: block;
             }
-            .api-demo {
-                background: rgba(255,255,255,0.1);
-                backdrop-filter: blur(10px);
-                border-radius: 15px;
-                padding: 20px;
-                margin-top: 40px;
-                color: white;
-            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <h1>🎵 Kpop News Aggregator</h1>
-                <p>Your one-stop destination for all K-pop news and updates</p>
+                <h1>🎵 韓流新聞聚合器</h1>
+                <p>您的韓流資訊一站式平台，掌握最新韓流動態</p>
             </div>
             
             <div class="search-bar">
-                <input type="text" placeholder="Search for artists, groups, or news..." id="searchInput">
-                <button onclick="searchNews()">🔍 Search</button>
+                <input type="text" placeholder="搜尋藝人、團體或新聞..." id="searchInput">
+                <button onclick="searchNews()">🔍 搜尋</button>
             </div>
             
             <div class="stats">
                 <div class="stat-item">
                     <span class="stat-number">${mockNews.length}</span>
-                    <span>Latest Articles</span>
+                    <span>最新文章</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">15+</span>
-                    <span>News Sources</span>
+                    <span>新聞來源</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">24/7</span>
-                    <span>Live Updates</span>
+                    <span>即時更新</span>
                 </div>
             </div>
             
@@ -222,12 +241,6 @@ app.get('/', (req, res) => {
                 `).join('')}
             </div>
             
-            <div class="api-demo">
-                <h3>🚀 API Endpoints Available:</h3>
-                <p><strong>GET /api/articles</strong> - Get all news articles</p>
-                <p><strong>GET /api/health</strong> - Health check</p>
-                <p><strong>POST /api/aggregate</strong> - Trigger news aggregation</p>
-            </div>
         </div>
         
         <script>
@@ -269,24 +282,24 @@ app.get('/api/articles', (req, res) => {
 
 app.get('/api/health', (req, res) => {
   res.json({ 
-    status: 'ok', 
+    status: '正常', 
     timestamp: new Date().toISOString(),
-    service: 'Kpop News Aggregator',
+    service: '韓流新聞聚合器',
     version: '2.0.0'
   });
 });
 
 app.post('/api/aggregate', (req, res) => {
   res.json({ 
-    message: 'News aggregation completed (demo mode)',
+    message: '新聞聚合完成（展示模式）',
     articlesProcessed: mockNews.length,
     timestamp: new Date().toISOString()
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Kpop News Aggregator running on port ${PORT}`);
-  console.log('✅ Frontend UI ready');
-  console.log('✅ API endpoints available'); 
-  console.log('✅ Mock data loaded');
+  console.log(`🚀 韓流新聞聚合器運行在端口 ${PORT}`);
+  console.log('✅ 前端介面就緒');
+  console.log('✅ API 端點可用'); 
+  console.log('✅ 模擬數據已載入');
 });
