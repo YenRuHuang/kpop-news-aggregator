@@ -27,11 +27,11 @@ const mockNews = [
     source: "Soompi",
     publishedAt: "2025-07-24T10:00:00Z",
     summary: "女團 NewJeans 正式宣布將於8月回歸，新專輯概念照片首度公開，展現全新成熟魅力，粉絲期待已久。此次回歸將帶來前所未有的音樂風格轉變。",
-    url: "https://www.soompi.com/",
+    url: "https://www.soompi.com/article/1628394wpp/newjeans-announces-august-comeback",
     tags: ["NewJeans", "回歸", "專輯"],
     category: "comeback",
     featured: true,
-    imageUrl: "https://i.imgur.com/dQeAjXs.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=faces&auto=format&q=80"
   },
   
   // 最新新聞
@@ -41,10 +41,10 @@ const mockNews = [
     source: "AllKPop",
     publishedAt: "2025-07-24T08:30:00Z",
     summary: "BTS 成員 Jin 個人第二張專輯預告片正式釋出，展現更加成熟的音樂風格。",
-    url: "https://www.allkpop.com/",
+    url: "https://www.allkpop.com/article/2025/07/bts-jin-releases-teaser-for-solo-album",
     tags: ["BTS", "Jin", "個人專輯"],
     category: "individual",
-    imageUrl: "https://i.imgur.com/mHkL9Rp.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 3,
@@ -52,10 +52,10 @@ const mockNews = [
     source: "Vogue",
     publishedAt: "2025-07-23T16:15:00Z",
     summary: "BLACKPINK Lisa 作為品牌全球大使在巴黎時裝週壓軸演出，造型獲得國際媒體盛讚。",
-    url: "https://www.vogue.com/",
+    url: "https://www.vogue.com/article/blackpink-lisa-paris-fashion-week-2025",
     tags: ["BLACKPINK", "Lisa", "時裝週"],
     category: "fashion",
-    imageUrl: "https://i.imgur.com/kNxQ2Yz.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 4,
@@ -63,10 +63,10 @@ const mockNews = [
     source: "拓元售票",
     publishedAt: "2025-07-23T14:45:00Z",
     summary: "SM 娛樂女團 aespa 世界巡演台北站門票今日開售，預計在台北小巨蛋舉辦兩場演出。",
-    url: "https://www.ticketmaster.tw/",
+    url: "https://www.ticketmaster.tw/activity/25_aespa_taipei",
     tags: ["aespa", "演唱會", "台北"],
     category: "concert",
-    imageUrl: "https://i.imgur.com/pVwR4Ts.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 5,
@@ -74,10 +74,10 @@ const mockNews = [
     source: "Billboard",
     publishedAt: "2025-07-22T12:30:00Z",
     summary: "SEVENTEEN 最新單曲《God of Music》發行後立即登上包括美國、日本在內16國音樂榜單冠軍。",
-    url: "https://www.billboard.com/",
+    url: "https://www.billboard.com/music/pop/seventeen-god-of-music-charts-success-2025",
     tags: ["SEVENTEEN", "新歌", "榜單"],
     category: "comeback",
-    imageUrl: "https://i.imgur.com/xBcP1Qw.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 6,
@@ -85,10 +85,10 @@ const mockNews = [
     source: "Oricon",
     publishedAt: "2025-07-22T09:20:00Z",
     summary: "新生代女團 IVE 日本出道單曲銷量正式突破150萬張，創下第四代女團新紀錄。",
-    url: "https://www.oricon.co.jp/",
+    url: "https://www.oricon.co.jp/news/2329847/full/ive-japan-debut-sales-record",
     tags: ["IVE", "日本", "銷量紀錄"],
     category: "individual",
-    imageUrl: "https://i.imgur.com/yDfH5Kw.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 7,
@@ -96,10 +96,10 @@ const mockNews = [
     source: "Soompi",
     publishedAt: "2025-07-21T18:45:00Z",
     summary: "(G)I-DLE 即將回歸的新專輯《I SWAY》概念照正式公開，展現神秘黑暗風格。",
-    url: "https://www.soompi.com/",
+    url: "https://www.soompi.com/article/1628401wpp/g-i-dle-reveals-concept-photos-i-sway",
     tags: ["(G)I-DLE", "回歸", "概念照"],
     category: "comeback",
-    imageUrl: "https://i.imgur.com/wLpM3Nx.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 8,
@@ -107,10 +107,10 @@ const mockNews = [
     source: "Variety",
     publishedAt: "2025-07-21T15:00:00Z",
     summary: "JYP 娛樂女團 ITZY 北美巡演圓滿結束，累計吸引30萬觀眾。",
-    url: "https://variety.com/",
+    url: "https://variety.com/2025/music/news/itzy-north-america-tour-success-2025",
     tags: ["ITZY", "巡演", "北美"],
     category: "concert",
-    imageUrl: "https://i.imgur.com/qRsT6Uv.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 9,
@@ -118,10 +118,10 @@ const mockNews = [
     source: "Tower Records",
     publishedAt: "2025-07-20T13:30:00Z",
     summary: "TWICE 即將發行的日本新單曲《DIVE》預購數量突破80萬張。",
-    url: "https://tower.jp/",
+    url: "https://tower.jp/article/news/twice-dive-single-preorder-record-2025",
     tags: ["TWICE", "日本單曲", "預購"],
     category: "individual",
-    imageUrl: "https://i.imgur.com/nHgF2Lk.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 10,
@@ -129,10 +129,10 @@ const mockNews = [
     source: "Elle Korea",
     publishedAt: "2025-07-20T10:15:00Z",
     summary: "Red Velvet 成員 Joy 登上《Elle Korea》8月號封面，展現多面魅力。",
-    url: "https://www.elle.com/",
+    url: "https://www.elle.com/kr/culture/celebrity/red-velvet-joy-august-cover-2025",
     tags: ["Red Velvet", "Joy", "畫報"],
     category: "fashion",
-    imageUrl: "https://i.imgur.com/mPqE8Yw.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 11,
@@ -140,10 +140,10 @@ const mockNews = [
     source: "Hanteo",
     publishedAt: "2025-07-19T14:20:00Z",
     summary: "ENHYPEN 最新專輯發行首週銷量突破250萬張，再次證明第四代男團實力。",
-    url: "https://www.hanteo.com/",
+    url: "https://www.hanteo.com/chart/news/enhypen-orange-blood-album-sales-2025",
     tags: ["ENHYPEN", "專輯銷量", "紀錄"],
     category: "comeback",
-    imageUrl: "https://i.imgur.com/rVsA9Mx.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 12,
@@ -151,10 +151,10 @@ const mockNews = [
     source: "Entertainment Weekly",
     publishedAt: "2025-07-18T20:45:00Z",
     summary: "LE SSERAFIM 在美國《Tonight Show》的精彩表演獲得媒體好評。",
-    url: "https://ew.com/",
+    url: "https://ew.com/music/le-sserafim-tonight-show-performance-2025",
     tags: ["LE SSERAFIM", "美國", "電視表演"],
     category: "international",
-    imageUrl: "https://i.imgur.com/tQwB7Jn.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 13,
@@ -162,10 +162,10 @@ const mockNews = [
     source: "YouTube Music",
     publishedAt: "2025-07-17T16:30:00Z",
     summary: "STRAY KIDS 熱門歌曲《S-CLASS》MV 觀看次數正式突破2億次。",
-    url: "https://music.youtube.com/",
+    url: "https://music.youtube.com/watch?v=stray-kids-s-class-mv-200-million-views",
     tags: ["STRAY KIDS", "MV", "YouTube"],
     category: "individual",
-    imageUrl: "https://i.imgur.com/cNvD4Kl.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 14,
@@ -173,10 +173,10 @@ const mockNews = [
     source: "Korea Herald",
     publishedAt: "2025-07-16T19:00:00Z",
     summary: "女團 NewJeans 憑藉電影《青春紀實》OST 獲得青龍電影獎最佳原聲音樂獎。",
-    url: "https://www.koreaherald.com/",
+    url: "https://www.koreaherald.com/view.php?ud=20250716000428&newjeans-wins-best-ost-award",
     tags: ["NewJeans", "獎項", "電影配樂"],
     category: "award",
-    imageUrl: "https://i.imgur.com/bFwP3Qs.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   },
   {
     id: 15,
@@ -184,10 +184,10 @@ const mockNews = [
     source: "Netflix Korea",
     publishedAt: "2025-07-15T11:45:00Z",
     summary: "BLACKPINK 四位成員將再次聚首拍攝真人秀，預計年底在Netflix播出。",
-    url: "https://www.netflix.com/",
+    url: "https://www.netflix.com/title/blackpink-house-2-reality-show-2025",
     tags: ["BLACKPINK", "綜藝節目", "Netflix"],
     category: "variety",
-    imageUrl: "https://i.imgur.com/eLkN6Pr.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
   }
 ];
 
