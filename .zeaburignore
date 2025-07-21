@@ -1,0 +1,9 @@
+frontend/
+backend/
+*.md
+.git/
+.gitignore
+deploy-*.js
+auto-deploy.js
+debug-*.js
+create-github-repo.js
