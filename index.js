@@ -892,8 +892,8 @@ app.get('/', (req, res) => {
             // 載入完成初始化
             document.addEventListener('DOMContentLoaded', function() {
                 console.log('🎵 韓流新聞聚合器已載入');
-                console.log(`📰 共載入 ${mockNews.length} 則新聞`);
-                console.log('🔥 精選新聞: 1 則, 最新新聞: ${latestNews.length} 則');
+                console.log('📰 共載入 ${mockNews.length} 則新聞');
+                console.log('🔥 精選新聞: 1 則, 最新新聞: ' + (${mockNews.length} - 1) + ' 則');
             });
         </script>
     </body>
