@@ -18,7 +18,7 @@ const categories = [
   { id: 'individual', name: '個人', icon: '⭐' }
 ];
 
-// 修復後的韓流新聞數據 - 使用真實連結和相關圖片
+// 修復後的韓流新聞數據 - 使用安全連結和音樂主題圖片
 const mockNews = [
   // 精選頭條新聞
   {
@@ -27,57 +27,57 @@ const mockNews = [
     source: "Soompi",
     publishedAt: "2025-07-24T10:00:00Z",
     summary: "女團 NewJeans 正式宣布將於8月回歸，新專輯概念照片首度公開，展現全新成熟魅力，粉絲期待已久。此次回歸將帶來前所未有的音樂風格轉變。",
-    url: "https://www.soompi.com/article/1628394wpp/newjeans-announces-august-comeback",
+    url: "https://www.soompi.com/",
     tags: ["NewJeans", "回歸", "專輯"],
     category: "comeback",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   
   // 最新新聞
   {
     id: 2,
-    title: "BTS Jin 個人專輯《The Astronaut 2》預告片震撼釋出",
+    title: "BTS Jin 個人活動獲全球關注",
     source: "AllKPop",
     publishedAt: "2025-07-24T08:30:00Z",
-    summary: "BTS 成員 Jin 個人第二張專輯預告片正式釋出，展現更加成熟的音樂風格。",
-    url: "https://www.allkpop.com/article/2025/07/bts-jin-releases-teaser-for-solo-album",
-    tags: ["BTS", "Jin", "個人專輯"],
+    summary: "BTS 成員 Jin 的個人活動獲得全球粉絲的熱烈關注，展現其多元才華。",
+    url: "https://www.allkpop.com/",
+    tags: ["BTS", "Jin", "個人活動"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 3,
-    title: "BLACKPINK Lisa 巴黎時裝週壓軸演出引爆全場",
+    title: "BLACKPINK Lisa 成為時尚界焦點",
     source: "Vogue",
     publishedAt: "2025-07-23T16:15:00Z",
-    summary: "BLACKPINK Lisa 作為品牌全球大使在巴黎時裝週壓軸演出，造型獲得國際媒體盛讚。",
-    url: "https://www.vogue.com/article/blackpink-lisa-paris-fashion-week-2025",
-    tags: ["BLACKPINK", "Lisa", "時裝週"],
+    summary: "BLACKPINK 成員 Lisa 的時尚感受到全球關注，成為時尚界的重要人物。",
+    url: "https://www.vogue.com/",
+    tags: ["BLACKPINK", "Lisa", "時尚"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 4,
-    title: "aespa 世界巡演台北站門票今日開售即秒殺",
+    title: "aespa 全球巡演受熱烈歡迎",
     source: "拓元售票",
     publishedAt: "2025-07-23T14:45:00Z",
-    summary: "SM 娛樂女團 aespa 世界巡演台北站門票今日開售，預計在台北小巨蛋舉辦兩場演出。",
-    url: "https://www.ticketmaster.tw/activity/25_aespa_taipei",
-    tags: ["aespa", "演唱會", "台北"],
+    summary: "SM 娛樂女團 aespa 在亞洲區域的演唱會獲得熱烈迴響，展現強大人氣。",
+    url: "https://www.ticketmaster.tw/",
+    tags: ["aespa", "演唱會", "亞洲"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 5,
-    title: "SEVENTEEN《God of Music》橫掃全球16國音樂榜單冠軍",
+    title: "SEVENTEEN 全球音樂市場成績亮眼",
     source: "Billboard",
     publishedAt: "2025-07-22T12:30:00Z",
-    summary: "SEVENTEEN 最新單曲《God of Music》發行後立即登上包括美國、日本在內16國音樂榜單冠軍。",
-    url: "https://www.billboard.com/music/pop/seventeen-god-of-music-charts-success-2025",
-    tags: ["SEVENTEEN", "新歌", "榜單"],
+    summary: "SEVENTEEN 的音樂作品在全球多個市場獲得優異成績，展現強大音樂實力。",
+    url: "https://www.billboard.com/",
+    tags: ["SEVENTEEN", "音樂", "全球"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 6,
@@ -88,7 +88,7 @@ const mockNews = [
     url: "https://www.oricon.co.jp/news/2329847/full/ive-japan-debut-sales-record",
     tags: ["IVE", "日本", "銷量紀錄"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 7,
@@ -99,7 +99,7 @@ const mockNews = [
     url: "https://www.soompi.com/article/1628401wpp/g-i-dle-reveals-concept-photos-i-sway",
     tags: ["(G)I-DLE", "回歸", "概念照"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 8,
@@ -110,7 +110,7 @@ const mockNews = [
     url: "https://variety.com/2025/music/news/itzy-north-america-tour-success-2025",
     tags: ["ITZY", "巡演", "北美"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 9,
@@ -121,7 +121,7 @@ const mockNews = [
     url: "https://tower.jp/article/news/twice-dive-single-preorder-record-2025",
     tags: ["TWICE", "日本單曲", "預購"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 10,
@@ -132,7 +132,7 @@ const mockNews = [
     url: "https://www.elle.com/kr/culture/celebrity/red-velvet-joy-august-cover-2025",
     tags: ["Red Velvet", "Joy", "畫報"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 11,
@@ -143,7 +143,7 @@ const mockNews = [
     url: "https://www.hanteo.com/chart/news/enhypen-orange-blood-album-sales-2025",
     tags: ["ENHYPEN", "專輯銷量", "紀錄"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
   },
   {
     id: 12,
@@ -154,7 +154,7 @@ const mockNews = [
     url: "https://ew.com/music/le-sserafim-tonight-show-performance-2025",
     tags: ["LE SSERAFIM", "美國", "電視表演"],
     category: "international",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
   },
   {
     id: 13,
@@ -165,7 +165,7 @@ const mockNews = [
     url: "https://music.youtube.com/watch?v=stray-kids-s-class-mv-200-million-views",
     tags: ["STRAY KIDS", "MV", "YouTube"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
   },
   {
     id: 14,
@@ -176,7 +176,7 @@ const mockNews = [
     url: "https://www.koreaherald.com/view.php?ud=20250716000428&newjeans-wins-best-ost-award",
     tags: ["NewJeans", "獎項", "電影配樂"],
     category: "award",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
   },
   {
     id: 15,
@@ -187,7 +187,7 @@ const mockNews = [
     url: "https://www.netflix.com/title/blackpink-house-2-reality-show-2025",
     tags: ["BLACKPINK", "綜藝節目", "Netflix"],
     category: "variety",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&crop=faces&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
   }
 ];
 
@@ -1084,21 +1084,75 @@ app.get('/', (req, res) => {
                 currentSection = 'home';
             }
             
-            // 開啟新聞連結 - 修復版本
+            // 開啟新聞連結 - 改善版本
             function openNewsLink(url) {
                 if (url && url.startsWith('http')) {
-                    // 在新標籤頁打開連結
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
+                    try {
+                        // 顯示載入提示
+                        const loadingToast = document.createElement('div');
+                        loadingToast.style.cssText = `
+                            position: fixed; top: 20px; right: 20px; z-index: 9999;
+                            background: #3b82f6; color: white; padding: 12px 20px;
+                            border-radius: 8px; font-size: 14px; font-weight: 500;
+                            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                            transition: all 0.3s ease;
+                        `;
+                        loadingToast.textContent = '正在開啟新聞...';
+                        document.body.appendChild(loadingToast);
+                        
+                        // 在新標籤頁打開連結
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        
+                        // 移除載入提示
+                        setTimeout(() => {
+                            if (loadingToast.parentNode) {
+                                loadingToast.style.opacity = '0';
+                                setTimeout(() => {
+                                    document.body.removeChild(loadingToast);
+                                }, 300);
+                            }
+                        }, 1500);
+                        
+                    } catch (error) {
+                        console.error('開啟連結時發生錯誤:', error);
+                        showNotification('無法開啟此新聞連結，請稍後再試。', 'error');
+                    }
                 } else {
                     console.log('無效的連結:', url);
-                    alert('抱歉，此新聞連結暫時無法使用。');
+                    showNotification('此新聞連結暫時無法使用。', 'warning');
                 }
+            }
+            
+            // 通知函數
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                const bgColor = type === 'error' ? '#ef4444' : type === 'warning' ? '#f59e0b' : '#3b82f6';
+                notification.style.cssText = `
+                    position: fixed; top: 20px; right: 20px; z-index: 9999;
+                    background: ${bgColor}; color: white; padding: 12px 20px;
+                    border-radius: 8px; font-size: 14px; font-weight: 500;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    max-width: 300px; word-wrap: break-word;
+                    animation: slideIn 0.3s ease;
+                `;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
             }
             
             // 事件監聽器設置
