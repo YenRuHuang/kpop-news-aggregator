@@ -1017,7 +1017,7 @@ app.get('/', (req, res) => {
                 });
                 
                 if (query && foundCount > 0) {
-                    document.querySelector('.section-title').innerHTML = \`🔍 搜尋結果 (\${foundCount} 則)\`;
+                    document.querySelector('.section-title').innerHTML = '🔍 搜尋結果 (' + foundCount + ' 則)';
                 }
                 
                 // 隱藏搜尋框
@@ -1050,8 +1050,8 @@ app.get('/', (req, res) => {
 
                 // 更新標題
                 const categoryName = categoryId === 'all' ? '全部新聞' : 
-                    document.querySelector(\`[onclick="filterByCategory('\${categoryId}')"]\`).textContent;
-                document.querySelector('.section-title').innerHTML = \`📂 \${categoryName} (\${visibleCount} 則)\`;
+                    document.querySelector('[onclick="filterByCategory(\'' + categoryId + '\')"]').textContent;
+                document.querySelector('.section-title').innerHTML = '📂 ' + categoryName + ' (' + visibleCount + ' 則)';
                 
                 // 滾動到新聞區域
                 window.scrollTo({ top: 400, behavior: 'smooth' });
@@ -1195,7 +1195,7 @@ app.get('/', (req, res) => {
                 
                 // 預載圖片
                 const images = document.querySelectorAll('[style*="background-image"]');
-                console.log(\`📷 開始預載 \${images.length} 張圖片\`);
+                console.log('📷 開始預載 ' + images.length + ' 張圖片');
             });
         </script>
     </body>
