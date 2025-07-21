@@ -655,7 +655,7 @@ app.get('/', (req, res) => {
                                 </div>
                             </div>
                         </div>`;
-                    }).join('')
+                    }).join('')}
                 </div>
             </section>
         </main>
