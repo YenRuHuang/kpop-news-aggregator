@@ -58,3 +58,8 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+
+# Deployment scripts with tokens (security)
+auto-deploy.js
+debug-zeabur-deployment.js
+create-github-repo.js
