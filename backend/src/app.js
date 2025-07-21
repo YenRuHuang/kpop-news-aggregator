@@ -71,8 +71,11 @@ async function initializeApp() {
   try {
     // 初始化資料庫
     console.log('Initializing database...');
-    const db = new Database();
-    await db.initialize();
+    const database = new Database();
+    await database.initialize();
+    
+    // 設置 Database 實例到單例模式
+    Database.instance = database;
 
     // 初始化 RSS 聚合器
     console.log('Initializing RSS aggregator...');
