@@ -37,80 +37,80 @@ const mockNews = [
   // 最新新聞
   {
     id: 2,
-    title: "BTS Jin 個人專輯《The Astronaut 2》預告片震撼釋出",
+    title: "BTS Jin 個人專輯《The Astronaut》全球成功",
     source: "AllKPop",
     publishedAt: "2025-07-24T08:30:00Z",
-    summary: "BTS 成員 Jin 個人第二張專輯預告片正式釋出，展現更加成熟的音樂風格。",
-    url: "https://www.allkpop.com/",
+    summary: "BTS 成員 Jin 個人專輯《The Astronaut》在全球多國音樂榜單獲得優異成績，展現其個人音樂實力。",
+    url: "https://www.soompi.com/article/1552683wpp/bts-jin-reveals-teaser-for-solo-single-the-astronaut",
     tags: ["BTS", "Jin", "個人專輯"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 3,
-    title: "BLACKPINK Lisa 巴黎時裝週壓軸演出引爆全場",
+    title: "BLACKPINK Lisa 成為全球時尚品牌大使",
     source: "Vogue",
     publishedAt: "2025-07-23T16:15:00Z",
-    summary: "BLACKPINK Lisa 作為品牌全球大使在巴黎時裝週壓軸演出，造型獲得國際媒體盛讚。",
-    url: "https://www.vogue.com/article/blackpink-lisa-paris-fashion-week-2025-show-stopper",
-    tags: ["BLACKPINK", "Lisa", "時裝週"],
+    summary: "BLACKPINK 成員 Lisa 正式成為國際知名時尚品牌全球大使，將參與多項時尚活動。",
+    url: "https://www.vogue.com/",
+    tags: ["BLACKPINK", "Lisa", "時裝"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 4,
-    title: "aespa 世界巡演台北站門票今日開售即秒殺",
+    title: "aespa 世界巡演確定來台演出",
     source: "拓元售票",
     publishedAt: "2025-07-23T14:45:00Z",
-    summary: "SM 娛樂女團 aespa 世界巡演台北站門票今日開售，預計在台北小巨蛋舉辦兩場演出。",
-    url: "https://www.ticketmaster.tw/aespa-world-tour-taipei-2025",
+    summary: "SM 娛樂女團 aespa 正式確認將在台北舉辦演唱會，門票開售時間即將公布。",
+    url: "https://www.ticketmaster.tw/",
     tags: ["aespa", "演唱會", "台北"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 5,
-    title: "SEVENTEEN《God of Music》橫掃全球16國音樂榜單冠軍",
+    title: "SEVENTEEN 新專輯銷量突破記錄",
     source: "Billboard",
     publishedAt: "2025-07-22T12:30:00Z",
-    summary: "SEVENTEEN 最新單曲《God of Music》發行後立即登上包括美國、日本在內16國音樂榜單冠軍。",
-    url: "https://www.billboard.com/music/pop/seventeen-god-of-music-charts-worldwide-success-2025",
+    summary: "SEVENTEEN 最新專輯發行首週即獲得驚人銷量，再次證明其在全球市場的影響力。",
+    url: "https://www.billboard.com/",
     tags: ["SEVENTEEN", "新歌", "榜單"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 6,
-    title: "IVE 日本出道單曲銷量突破150萬張創新紀錄",
+    title: "IVE 日本活動大獲成功",
     source: "Oricon",
     publishedAt: "2025-07-22T09:20:00Z",
-    summary: "新生代女團 IVE 日本出道單曲銷量正式突破150萬張，創下第四代女團新紀錄。",
-    url: "https://www.oricon.co.jp/news/2329847/full/ive-japan-debut-single-sales-record",
-    tags: ["IVE", "日本", "銷量紀錄"],
+    summary: "新生代女團 IVE 在日本舉辦的粉絲見面會獲得熱烈迴響，展現強大人氣。",
+    url: "https://www.oricon.co.jp/",
+    tags: ["IVE", "日本", "粉絲見面會"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 7,
-    title: "(G)I-DLE 新專輯《I SWAY》概念照展現神秘魅力",
+    title: "(G)I-DLE 新專輯概念照公開",
     source: "Soompi",
     publishedAt: "2025-07-21T18:45:00Z",
-    summary: "(G)I-DLE 即將回歸的新專輯《I SWAY》概念照正式公開，展現神秘黑暗風格。",
-    url: "https://www.soompi.com/article/1628401wpp/g-i-dle-reveals-mysterious-concept-photos-for-i-sway-album",
+    summary: "(G)I-DLE 即將發行的新專輯概念照正式公開，展現成員們的多樣魅力。",
+    url: "https://www.soompi.com/",
     tags: ["(G)I-DLE", "回歸", "概念照"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 8,
-    title: "ITZY 北美巡演累計30萬觀眾創團體新高",
+    title: "ITZY 美國巡演大成功",
     source: "Variety",
     publishedAt: "2025-07-21T15:00:00Z",
-    summary: "JYP 娛樂女團 ITZY 北美巡演圓滿結束，累計吸引30萬觀眾。",
-    url: "https://variety.com/2025/music/news/itzy-north-america-tour-success-300k-attendance",
-    tags: ["ITZY", "巡演", "北美"],
+    summary: "JYP 娛樂女團 ITZY 美國巡演圓滿結束，獲得當地媒體和粉絲高度評價。",
+    url: "https://variety.com/",
+    tags: ["ITZY", "巡演", "美國"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 9,
