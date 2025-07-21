@@ -31,7 +31,7 @@ const mockNews = [
     tags: ["NewJeans", "回歸", "專輯"],
     category: "comeback",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&q=80&ixlib=rb-4.0.3"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
   },
   
   // 最新新聞
@@ -41,10 +41,10 @@ const mockNews = [
     source: "AllKPop",
     publishedAt: "2025-07-24T08:30:00Z",
     summary: "BTS 成員 Jin 個人專輯《The Astronaut》在全球多國音樂榜單獲得優異成績，展現其個人音樂實力。",
-    url: "https://www.soompi.com/article/1552683wpp/bts-jin-reveals-teaser-for-solo-single-the-astronaut",
+    url: "https://www.soompi.com/",
     tags: ["BTS", "Jin", "個人專輯"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ const mockNews = [
     url: "https://www.vogue.com/",
     tags: ["BLACKPINK", "Lisa", "時裝"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 4,
@@ -66,7 +66,7 @@ const mockNews = [
     url: "https://www.ticketmaster.tw/",
     tags: ["aespa", "演唱會", "台北"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 5,
@@ -99,7 +99,7 @@ const mockNews = [
     url: "https://www.soompi.com/",
     tags: ["(G)I-DLE", "回歸", "概念照"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 8,
