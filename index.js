@@ -16,11 +16,11 @@ const categories = [
   { id: 'popup', name: '快閃活動', icon: '⚡' }
 ];
 
-// 導入基於真實資訊的 K-pop 演出資料
-const realKpopEvents = require('./real_events_data.js');
+// 導入經過驗證的真實 K-pop 演出資料 (基於官方公告和可信來源)
+const verifiedKpopEvents = require('./verified_events_2025.js');
 
 // K-pop 演出活動真實資訊
-const kpopData = realKpopEvents;
+const kpopData = verifiedKpopEvents;
 
 // 熱門K-pop標籤
 const trendingTags = ["NewJeans", "SEVENTEEN", "IVE", "BTS", "aespa", "(G)I-DLE"];
