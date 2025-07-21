@@ -646,8 +646,8 @@ app.get('/', (req, res) => {
                     clickedElement.classList.add('active');
                 }
                 
-                // 篩選活動
-                const cards = document.querySelectorAll('.event-card');
+                // 篩選資訊
+                const cards = document.querySelectorAll('.info-card');
                 cards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (categoryId === 'all' || cardCategory === categoryId) {
@@ -669,7 +669,7 @@ app.get('/', (req, res) => {
                     firstCategory.classList.add('active');
                 }
                 
-                document.querySelectorAll('.event-card').forEach(card => {
+                document.querySelectorAll('.info-card').forEach(card => {
                     card.style.display = 'block';
                 });
                 
