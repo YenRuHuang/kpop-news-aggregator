@@ -77,7 +77,7 @@ const mockNews = [
     url: "https://www.billboard.com/",
     tags: ["SEVENTEEN", "新歌", "榜單"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 6,
@@ -88,7 +88,7 @@ const mockNews = [
     url: "https://www.oricon.co.jp/",
     tags: ["IVE", "日本", "粉絲見面會"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 7,
@@ -110,7 +110,7 @@ const mockNews = [
     url: "https://variety.com/",
     tags: ["ITZY", "巡演", "美國"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 9,
@@ -121,7 +121,7 @@ const mockNews = [
     url: "https://tower.jp/article/news/twice-dive-single-preorder-record-800k",
     tags: ["TWICE", "日本單曲", "預購"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 10,
@@ -132,7 +132,7 @@ const mockNews = [
     url: "https://www.elle.com/kr/culture/celebrity/red-velvet-joy-august-cover-2025",
     tags: ["Red Velvet", "Joy", "畫報"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 11,
@@ -176,7 +176,7 @@ const mockNews = [
     url: "https://www.koreaherald.com/view.php?ud=20250716000428&newjeans-wins-best-ost-blue-dragon-awards",
     tags: ["NewJeans", "獎項", "電影配樂"],
     category: "award",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80"
   },
   {
     id: 15,
