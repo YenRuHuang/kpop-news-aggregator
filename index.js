@@ -5,109 +5,95 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.static('public'));
 
-// 演出活動分類
+// K-pop 資訊分類
 const categories = [
-  { id: 'all', name: '全部活動', icon: '🎪' },
-  { id: 'concert', name: '演唱會', icon: '🎤' },
-  { id: 'fanmeeting', name: '粉絲見面會', icon: '👥' },
-  { id: 'festival', name: '音樂節', icon: '🎡' },
-  { id: 'showcase', name: '發片會', icon: '🎵' },
-  { id: 'popup', name: '快閃活動', icon: '⚡' },
-  { id: 'exhibition', name: '展覽', icon: '🖼️' },
-  { id: 'workshop', name: '工作坊', icon: '🎓' }
+  { id: 'all', name: '全部資訊', icon: '🎵' },
+  { id: 'groups', name: '團體資訊', icon: '👥' },
+  { id: 'albums', name: '最新專輯', icon: '💿' },
+  { id: 'achievements', name: '成就記錄', icon: '🏆' },
+  { id: 'variety', name: '綜藝節目', icon: '📺' },
+  { id: 'collaborations', name: '合作作品', icon: '🤝' }
 ];
 
-// K-pop 演出活動資訊數據
-const eventData = [
-  // 精選演出活動
+// K-pop 真實資訊數據
+const kpopData = [
+  // 人氣團體資訊
   {
     id: 1,
-    title: "NewJeans 2025 世界巡演 'Get Up Tour' 台北站",
-    artist: "NewJeans",
-    date: "2025-09-15",
-    time: "19:00",
-    venue: "台北小巨蛋",
-    location: "台北市松山區",
-    price: "NT$2,800 - NT$8,800",
-    description: "NewJeans 首次來台演出！將帶來全新舞台設計和經典曲目表演。包含《Get Up》、《Super Shy》等熱門歌曲。",
-    status: "預售中",
-    category: "concert",
+    title: "NewJeans",
+    subtitle: "女團 | ADOR (原 HYBE)",
+    debut: "2022年7月",
+    members: "Minji, Hanni, Danielle, Haerin, Hyein",
+    latestWork: "最新單曲: 'How Sweet' (2024.05)",
+    achievement: "Billboard Hot 100 首位韓國女團",
+    description: "2022年出道的新生代女團，以Y2K風格和清新音樂風格受到全球關注。代表作品《Attention》、《Hype Boy》、《Super Shy》在各大音樂榜單獲得優異成績。",
+    category: "groups",
     featured: true,
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   
   {
     id: 2,
-    title: "BLACKPINK Lisa 粉絲見面會 'LLOUD' 首爾站",
-    artist: "BLACKPINK Lisa",
-    date: "2025-08-22",
-    time: "15:00",
-    venue: "Olympic Hall",
-    location: "首爾奧林匹克公園",
-    price: "KRW 150,000 - KRW 350,000",
-    description: "Lisa 個人活動後首次粉絲見面會，將分享新音樂作品和與粉絲互動遊戲。",
-    status: "售票中",
-    category: "fanmeeting",
+    title: "SEVENTEEN",
+    subtitle: "男團 | PLEDIS Entertainment",
+    debut: "2015年5月",
+    members: "13人: 音樂組、表演組、Hip-hop組",
+    latestWork: "最新專輯: 'SEVENTEENTH HEAVEN' (2023.10)",
+    achievement: "Billboard 200 #2, 多國音樂榜冠軍",
+    description: "2015年出道的男團，以自製偶像聞名。由13名成員組成，分為三個小組。代表作品《Very Nice》、《Don't Wanna Cry》、《Left & Right》在亞洲各地取得巨大成功。",
+    category: "groups",
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   
   {
     id: 3,
-    title: "SEVENTEEN 'Follow Again' Tour 高雄站",
-    artist: "SEVENTEEN",
-    date: "2025-10-08",
-    time: "18:30",
-    venue: "高雄巨蛋",
-    location: "高雄市左營區",
-    price: "NT$3,200 - NT$9,800",
-    description: "SEVENTEEN 睽違三年再度來台！全新專輯歌曲首演，預計演出3小時精彩內容。",
-    status: "即將開售",
-    category: "concert",
+    title: "IVE - I'VE IVE",
+    subtitle: "最新專輯 | 2023年10月發行",
+    debut: "發行日期",
+    members: "2023年10月13日",
+    latestWork: "主打歌: 'Baddie', 'Off The Record'",
+    achievement: "韓國 Hanteo Chart 週榜冠軍",
+    description: "IVE的首張正規專輯，展現成員們多元的音樂風格。包含了強勁的主打歌'Baddie'和情歌'Off The Record'，充分展現了IVE的音樂才華和成熟的一面。",
+    category: "albums",
     gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   
   {
     id: 4,
-    title: "aespa Showcase 'MY WORLD' 香港站",
-    artist: "aespa",
-    date: "2025-08-30",
-    time: "20:00",
-    venue: "AsiaWorld-Expo",
-    location: "香港機場",
-    price: "HK$880 - HK$2,880",
-    description: "aespa 最新專輯發片會，將首度表演新歌《Armageddon》等曲目。",
-    status: "預售中",
-    category: "showcase",
+    title: "BTS - Proof",
+    subtitle: "精選集 | 2022年6月發行",
+    debut: "發行日期",
+    members: "2022年6月10日",
+    latestWork: "主打歌: 'Yet To Come (The Most Beautiful Moment)'",
+    achievement: "Billboard 200 #1, 全球销量突破300萬張",
+    description: "BTS的第二張精選集，收錄了團體自2013年出道以來的代表作品和全新歌曲。包含了三CD的豐富內容，展現了BTS的音樂歷程和成長軌跡。",
+    category: "albums",
     gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
   },
   
   {
     id: 5,
-    title: "IVE 粉絲見面會 'I'VE MINE' 新加坡站",
-    artist: "IVE",
-    date: "2025-09-05",
-    time: "19:30",
-    venue: "Suntec Convention Centre",
-    location: "新加坡市中心",
-    price: "S$180 - S$480",
-    description: "IVE 東南亞首場粉絲見面會，包含遊戲環節和專屬表演舞台。",
-    status: "售票中",
-    category: "fanmeeting",
+    title: "aespa",
+    subtitle: "女團 | SM Entertainment",
+    debut: "2020年11月",
+    members: "Karina, Giselle, Winter, Ningning",
+    latestWork: "最新單曲: 'Supernova' (2024.05)",
+    achievement: "Coachella 2022 首組參演K-pop女團",
+    description: "SM娛樂推出的第四代女團，以'AI+偶像'概念和獨特的世界觀'展現全新的K-pop風格。代表作品《Black Mamba》、《Next Level》、《Savage》在全球獲得巨大迴響。",
+    category: "groups",
     gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   
   {
     id: 6,
-    title: "Summer K-Pop Festival 2025",
-    artist: "Multiple Artists",
-    date: "2025-07-28",
-    time: "16:00",
-    venue: "大佳河濱公園",
-    location: "台北市中山區",
-    price: "NT$1,800 - NT$5,500",
-    description: "夏日韓流音樂節，邀請 ITZY、(G)I-DLE、NMIXX 等多組藝人共同演出。",
-    status: "售票中",
-    category: "festival",
+    title: "(G)I-DLE - I Never Die",
+    subtitle: "正規一輯 | 2022年3月發行",
+    debut: "發行日期",
+    members: "2022年3月14日",
+    latestWork: "主打歌: 'TOMBOY', 'MY BAG'",
+    achievement: "韓國 Circle Chart 週榜冠軍",
+    description: "(G)I-DLE的第一張正規專輯，由隊長韶雨晶參與大部分歌曲的制作。主打歌'TOMBOY'展現了團體的自信和個性，成為2022年最受歡迎的K-pop歌曲之一。",
+    category: "albums",
     gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   
@@ -142,12 +128,15 @@ const eventData = [
   }
 ];
 
+// 熱門K-pop標籤
+const trendingTags = ["NewJeans", "SEVENTEEN", "IVE", "BTS", "aespa", "(G)I-DLE"];
+
 // 熱門藝人標籤
 const trendingArtists = ["NewJeans", "BLACKPINK", "SEVENTEEN", "aespa", "IVE", "TWICE"];
 
 app.get('/', (req, res) => {
-  const featuredEvent = eventData.filter(event => event.featured)[0];
-  const upcomingEvents = eventData.filter(event => !event.featured);
+  const featuredInfo = kpopData.filter(info => info.featured)[0];
+  const allInfo = kpopData.filter(info => !info.featured);
   
   res.send(`
     <!DOCTYPE html>
@@ -155,7 +144,7 @@ app.get('/', (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>K-pop Events | 韓流演出活動資訊</title>
+        <title>K-pop Info | 韓流資訊展示</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
             * {
@@ -547,14 +536,9 @@ app.get('/', (req, res) => {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C13.1 2 14 2.9 14 4V8L15 9V22H9V16H15V10L14 9V4C14 2.9 13.1 2 12 2H12Z"/>
                     </svg>
-                    K-pop Events
+                    K-pop Info
                 </div>
                 
-                <nav class="nav-links">
-                    <span class="nav-link active">首頁</span>
-                    <span class="nav-link">演出活動</span>
-                    <span class="nav-link">藝人排程</span>
-                </nav>
             </div>
         </header>
         
@@ -571,40 +555,36 @@ app.get('/', (req, res) => {
         
         <!-- Main Content -->
         <main class="main-container">
-            <!-- Featured Event -->
-            <section class="featured-event">
+            <!-- Featured Info -->
+            <section class="featured-info">
                 <h2 class="section-title">
-                    🌟 精選活動
+                    🌟 精選資訊
                 </h2>
                 
-                ${featuredEvent ? `
-                <div class="event-showcase">
-                    <div class="event-image" style="background: ${featuredEvent.gradient}">
-                        <div class="event-badge">${featuredEvent.artist}</div>
+                ${featuredInfo ? `
+                <div class="info-showcase">
+                    <div class="info-header" style="background: ${featuredInfo.gradient}">
+                        <div class="info-badge">精選</div>
                     </div>
-                    <div class="event-content">
-                        <div class="event-meta">
-                            <span>📅 ${featuredEvent.date}</span>
-                            <span>📍 ${featuredEvent.venue}</span>
+                    <div class="info-content">
+                        <div class="info-meta">
+                            <span>🎵 ${featuredInfo.subtitle}</span>
+                            <span>📅 ${featuredInfo.debut}</span>
                         </div>
-                        <h3 class="event-title">${featuredEvent.title}</h3>
-                        <p class="event-description">${featuredEvent.description}</p>
-                        <div class="event-details">
+                        <h3 class="info-title">${featuredInfo.title}</h3>
+                        <p class="info-description">${featuredInfo.description}</p>
+                        <div class="info-details">
                             <div class="detail-item">
-                                <div class="detail-label">演出時間</div>
-                                <div class="detail-value">${featuredEvent.time}</div>
+                                <div class="detail-label">成員</div>
+                                <div class="detail-value">${featuredInfo.members}</div>
                             </div>
                             <div class="detail-item">
-                                <div class="detail-label">地點</div>
-                                <div class="detail-value">${featuredEvent.location}</div>
+                                <div class="detail-label">最新作品</div>
+                                <div class="detail-value">${featuredInfo.latestWork}</div>
                             </div>
                             <div class="detail-item">
-                                <div class="detail-label">票價</div>
-                                <div class="detail-value">${featuredEvent.price}</div>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-label">狀態</div>
-                                <div class="detail-value">${featuredEvent.status}</div>
+                                <div class="detail-label">成就</div>
+                                <div class="detail-value">${featuredInfo.achievement}</div>
                             </div>
                         </div>
                     </div>
@@ -612,45 +592,37 @@ app.get('/', (req, res) => {
                 ` : ''}
             </section>
             
-            <!-- Upcoming Events -->
-            <section class="upcoming-events">
+            <!-- K-pop Info -->
+            <section class="kpop-info">
                 <h2 class="section-title">
-                    🎪 即將到來
+                    🎵 K-pop 資訊
                 </h2>
                 
-                <div class="events-grid" id="eventsGrid">
-                    ${upcomingEvents.map(event => {
-                        const eventDate = new Date(event.date);
-                        const day = eventDate.getDate();
-                        const month = eventDate.toLocaleDateString('zh-TW', {month: 'short'});
-                        
+                <div class="info-grid" id="infoGrid">
+                    ${allInfo.map(info => {
                         return `
-                        <div class="event-card" data-category="${event.category}" style="--gradient: ${event.gradient}">
-                            <div class="card-header" style="background: ${event.gradient}">
-                                <div class="card-badge">${categories.find(cat => cat.id === event.category)?.name || '活動'}</div>
-                                <div class="status-badge">${event.status}</div>
+                        <div class="info-card" data-category="${info.category}" style="--gradient: ${info.gradient}">
+                            <div class="card-header" style="background: ${info.gradient}">
+                                <div class="card-badge">${categories.find(cat => cat.id === info.category)?.name || '資訊'}</div>
                                 <div class="card-header-content">
-                                    <div class="card-date">${day}</div>
-                                    <div class="card-month">${month}</div>
+                                    <div class="card-icon">🎵</div>
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-artist">${event.artist}</div>
-                                <h3 class="card-title">${event.title}</h3>
+                                <h3 class="card-title">${info.title}</h3>
+                                <div class="card-subtitle">${info.subtitle}</div>
                                 <div class="card-details">
-                                    <span>⏰ ${event.time}</span>
-                                    <span>📍 ${event.venue}</span>
-                                    <span>🌏 ${event.location}</span>
-                                </div>
-                                <div class="card-price">${event.price}</div>
-                                <div class="info-grid">
-                                    <div class="info-item">
-                                        <div class="info-label">演出日期</div>
-                                        <div class="info-value">${event.date}</div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">出道/發行:</span>
+                                        <span class="detail-value">${info.debut}</span>
                                     </div>
-                                    <div class="info-item">
-                                        <div class="info-label">演出時間</div>
-                                        <div class="info-value">${event.time}</div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">最新作品:</span>
+                                        <span class="detail-value">${info.latestWork}</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">成就:</span>
+                                        <span class="detail-value">${info.achievement}</span>
                                     </div>
                                 </div>
                             </div>
@@ -722,36 +694,36 @@ app.get('/', (req, res) => {
 });
 
 // API endpoints
-app.get('/api/events', (req, res) => {
-  const { category, artist } = req.query;
-  let filteredEvents = eventData;
+app.get('/api/info', (req, res) => {
+  const { category, search } = req.query;
+  let filteredInfo = kpopData;
   
   if (category && category !== 'all') {
-    filteredEvents = filteredEvents.filter(event => event.category === category);
+    filteredInfo = filteredInfo.filter(info => info.category === category);
   }
   
-  if (artist) {
-    const searchLower = artist.toLowerCase();
-    filteredEvents = filteredEvents.filter(event => 
-      event.artist.toLowerCase().includes(searchLower) ||
-      event.title.toLowerCase().includes(searchLower)
+  if (search) {
+    const searchLower = search.toLowerCase();
+    filteredInfo = filteredInfo.filter(info => 
+      info.title.toLowerCase().includes(searchLower) ||
+      info.subtitle.toLowerCase().includes(searchLower)
     );
   }
   
   res.json({ 
     success: true, 
-    data: filteredEvents,
-    total: filteredEvents.length,
+    data: filteredInfo,
+    total: filteredInfo.length,
     categories: categories
   });
 });
 
-app.get('/api/artists', (req, res) => {
+app.get('/api/trending', (req, res) => {
   res.json({ 
     success: true, 
-    data: trendingArtists.map(artist => ({
-      artist,
-      eventCount: eventData.filter(event => event.artist.includes(artist)).length
+    data: trendingTags.map(tag => ({
+      tag,
+      count: kpopData.filter(info => info.title.includes(tag)).length
     }))
   });
 });
@@ -760,20 +732,20 @@ app.get('/api/health', (req, res) => {
   res.json({ 
     status: '正常', 
     timestamp: new Date().toISOString(),
-    service: 'K-pop Events | 韓流演出活動資訊',
-    version: '4.0.0',
-    totalEvents: eventData.length,
+    service: 'K-pop Info | 韓流資訊展示',
+    version: '5.0.0',
+    totalInfo: kpopData.length,
     categories: categories.length,
-    featured: eventData.filter(e => e.featured).length
+    featured: kpopData.filter(i => i.featured).length
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`🎪 K-pop Events 運行在端口 ${PORT}`);
-  console.log('✅ 演出活動資訊平台就緒');
-  console.log('✅ 全新活動導向設計'); 
-  console.log('✅ 完整活動數據已載入');
-  console.log(`🎤 總共 ${eventData.length} 個活動`);
+  console.log(`🎵 K-pop Info 運行在端口 ${PORT}`);
+  console.log('✅ K-pop資訊展示平台就緒');
+  console.log('✅ 真實K-pop資訊設計'); 
+  console.log('✅ 完整資訊數據已載入');
+  console.log(`🎤 總共 ${kpopData.length} 筆資訊`);
   console.log(`🏷️ ${categories.length} 個分類`);
-  console.log('🌟 精選活動系統啟用');
+  console.log('🌟 精選資訊系統啟用');
 });
