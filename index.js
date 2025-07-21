@@ -685,7 +685,7 @@ app.get('/', (req, res) => {
             // 載入完成初始化
             document.addEventListener('DOMContentLoaded', function() {
                 console.log('🎪 K-pop Events 已載入');
-                console.log('🎤 共載入 ' + ${eventData.length} + ' 個活動');
+                console.log('🎤 共載入 ' + ${kpopData.length} + ' 筆資訊');
             });
         </script>
     </body>
