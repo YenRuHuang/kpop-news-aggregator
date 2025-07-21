@@ -1,15 +1,13 @@
 {
   "build": {
     "commands": [
-      "npm install",
-      "cd frontend && npm install",
-      "cd backend && npm install",
-      "cd frontend && npm run build"
+      "npm install"
     ]
   },
-  "start": "cd backend && npm start",
+  "start": "npm start",
   "env": {
     "NODE_ENV": "production",
-    "PORT": "8080"
+    "PORT": "8080",
+    "SKIP_DB_INIT": "true"
   }
 }

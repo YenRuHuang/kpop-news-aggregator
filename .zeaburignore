@@ -7,3 +7,9 @@ deploy-*.js
 auto-deploy.js
 debug-*.js
 create-github-repo.js
+DEPLOYMENT*.md
+README.md
+check-*.js
+configure-*.js
+final-*.js
+simple-*.js
