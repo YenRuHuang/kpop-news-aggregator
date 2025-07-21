@@ -18,7 +18,7 @@ const categories = [
   { id: 'individual', name: '個人', icon: '⭐' }
 ];
 
-// 修復後的韓流新聞數據 - 使用安全連結和音樂主題圖片
+// 擴充韓流新聞數據 (2025年6月-7月)
 const mockNews = [
   // 精選頭條新聞
   {
@@ -31,53 +31,53 @@ const mockNews = [
     tags: ["NewJeans", "回歸", "專輯"],
     category: "comeback",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&q=80&ixlib=rb-4.0.3"
   },
   
   // 最新新聞
   {
     id: 2,
-    title: "BTS Jin 個人活動獲全球關注",
+    title: "BTS Jin 個人專輯《The Astronaut 2》預告片震撼釋出",
     source: "AllKPop",
     publishedAt: "2025-07-24T08:30:00Z",
-    summary: "BTS 成員 Jin 的個人活動獲得全球粉絲的熱烈關注，展現其多元才華。",
+    summary: "BTS 成員 Jin 個人第二張專輯預告片正式釋出，展現更加成熟的音樂風格。",
     url: "https://www.allkpop.com/",
-    tags: ["BTS", "Jin", "個人活動"],
+    tags: ["BTS", "Jin", "個人專輯"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3"
   },
   {
     id: 3,
-    title: "BLACKPINK Lisa 成為時尚界焦點",
+    title: "BLACKPINK Lisa 巴黎時裝週壓軸演出引爆全場",
     source: "Vogue",
     publishedAt: "2025-07-23T16:15:00Z",
-    summary: "BLACKPINK 成員 Lisa 的時尚感受到全球關注，成為時尚界的重要人物。",
-    url: "https://www.vogue.com/",
-    tags: ["BLACKPINK", "Lisa", "時尚"],
+    summary: "BLACKPINK Lisa 作為品牌全球大使在巴黎時裝週壓軸演出，造型獲得國際媒體盛讚。",
+    url: "https://www.vogue.com/article/blackpink-lisa-paris-fashion-week-2025-show-stopper",
+    tags: ["BLACKPINK", "Lisa", "時裝週"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 4,
-    title: "aespa 全球巡演受熱烈歡迎",
+    title: "aespa 世界巡演台北站門票今日開售即秒殺",
     source: "拓元售票",
     publishedAt: "2025-07-23T14:45:00Z",
-    summary: "SM 娛樂女團 aespa 在亞洲區域的演唱會獲得熱烈迴響，展現強大人氣。",
-    url: "https://www.ticketmaster.tw/",
-    tags: ["aespa", "演唱會", "亞洲"],
+    summary: "SM 娛樂女團 aespa 世界巡演台北站門票今日開售，預計在台北小巨蛋舉辦兩場演出。",
+    url: "https://www.ticketmaster.tw/aespa-world-tour-taipei-2025",
+    tags: ["aespa", "演唱會", "台北"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 5,
-    title: "SEVENTEEN 全球音樂市場成績亮眼",
+    title: "SEVENTEEN《God of Music》橫掃全球16國音樂榜單冠軍",
     source: "Billboard",
     publishedAt: "2025-07-22T12:30:00Z",
-    summary: "SEVENTEEN 的音樂作品在全球多個市場獲得優異成績，展現強大音樂實力。",
-    url: "https://www.billboard.com/",
-    tags: ["SEVENTEEN", "音樂", "全球"],
+    summary: "SEVENTEEN 最新單曲《God of Music》發行後立即登上包括美國、日本在內16國音樂榜單冠軍。",
+    url: "https://www.billboard.com/music/pop/seventeen-god-of-music-charts-worldwide-success-2025",
+    tags: ["SEVENTEEN", "新歌", "榜單"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 6,
@@ -85,10 +85,10 @@ const mockNews = [
     source: "Oricon",
     publishedAt: "2025-07-22T09:20:00Z",
     summary: "新生代女團 IVE 日本出道單曲銷量正式突破150萬張，創下第四代女團新紀錄。",
-    url: "https://www.oricon.co.jp/news/2329847/full/ive-japan-debut-sales-record",
+    url: "https://www.oricon.co.jp/news/2329847/full/ive-japan-debut-single-sales-record",
     tags: ["IVE", "日本", "銷量紀錄"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 7,
@@ -96,10 +96,10 @@ const mockNews = [
     source: "Soompi",
     publishedAt: "2025-07-21T18:45:00Z",
     summary: "(G)I-DLE 即將回歸的新專輯《I SWAY》概念照正式公開，展現神秘黑暗風格。",
-    url: "https://www.soompi.com/article/1628401wpp/g-i-dle-reveals-concept-photos-i-sway",
+    url: "https://www.soompi.com/article/1628401wpp/g-i-dle-reveals-mysterious-concept-photos-for-i-sway-album",
     tags: ["(G)I-DLE", "回歸", "概念照"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 8,
@@ -107,10 +107,10 @@ const mockNews = [
     source: "Variety",
     publishedAt: "2025-07-21T15:00:00Z",
     summary: "JYP 娛樂女團 ITZY 北美巡演圓滿結束，累計吸引30萬觀眾。",
-    url: "https://variety.com/2025/music/news/itzy-north-america-tour-success-2025",
+    url: "https://variety.com/2025/music/news/itzy-north-america-tour-success-300k-attendance",
     tags: ["ITZY", "巡演", "北美"],
     category: "concert",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 9,
@@ -118,10 +118,10 @@ const mockNews = [
     source: "Tower Records",
     publishedAt: "2025-07-20T13:30:00Z",
     summary: "TWICE 即將發行的日本新單曲《DIVE》預購數量突破80萬張。",
-    url: "https://tower.jp/article/news/twice-dive-single-preorder-record-2025",
+    url: "https://tower.jp/article/news/twice-dive-single-preorder-record-800k",
     tags: ["TWICE", "日本單曲", "預購"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 10,
@@ -132,7 +132,7 @@ const mockNews = [
     url: "https://www.elle.com/kr/culture/celebrity/red-velvet-joy-august-cover-2025",
     tags: ["Red Velvet", "Joy", "畫報"],
     category: "fashion",
-    imageUrl: "https://images.unsplash.com/photo-1574391884720-bfbf13d85e0d?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 11,
@@ -140,10 +140,10 @@ const mockNews = [
     source: "Hanteo",
     publishedAt: "2025-07-19T14:20:00Z",
     summary: "ENHYPEN 最新專輯發行首週銷量突破250萬張，再次證明第四代男團實力。",
-    url: "https://www.hanteo.com/chart/news/enhypen-orange-blood-album-sales-2025",
+    url: "https://www.hanteo.com/chart/news/enhypen-orange-blood-album-sales-2.5million-first-week",
     tags: ["ENHYPEN", "專輯銷量", "紀錄"],
     category: "comeback",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 12,
@@ -151,10 +151,10 @@ const mockNews = [
     source: "Entertainment Weekly",
     publishedAt: "2025-07-18T20:45:00Z",
     summary: "LE SSERAFIM 在美國《Tonight Show》的精彩表演獲得媒體好評。",
-    url: "https://ew.com/music/le-sserafim-tonight-show-performance-2025",
+    url: "https://ew.com/music/le-sserafim-tonight-show-performance-praise-2025",
     tags: ["LE SSERAFIM", "美國", "電視表演"],
     category: "international",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 13,
@@ -162,10 +162,10 @@ const mockNews = [
     source: "YouTube Music",
     publishedAt: "2025-07-17T16:30:00Z",
     summary: "STRAY KIDS 熱門歌曲《S-CLASS》MV 觀看次數正式突破2億次。",
-    url: "https://music.youtube.com/watch?v=stray-kids-s-class-mv-200-million-views",
+    url: "https://www.youtube.com/watch?v=stray-kids-s-class-mv-200-million-views",
     tags: ["STRAY KIDS", "MV", "YouTube"],
     category: "individual",
-    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 14,
@@ -173,10 +173,10 @@ const mockNews = [
     source: "Korea Herald",
     publishedAt: "2025-07-16T19:00:00Z",
     summary: "女團 NewJeans 憑藉電影《青春紀實》OST 獲得青龍電影獎最佳原聲音樂獎。",
-    url: "https://www.koreaherald.com/view.php?ud=20250716000428&newjeans-wins-best-ost-award",
+    url: "https://www.koreaherald.com/view.php?ud=20250716000428&newjeans-wins-best-ost-blue-dragon-awards",
     tags: ["NewJeans", "獎項", "電影配樂"],
     category: "award",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format&q=80"
   },
   {
     id: 15,
@@ -184,10 +184,10 @@ const mockNews = [
     source: "Netflix Korea",
     publishedAt: "2025-07-15T11:45:00Z",
     summary: "BLACKPINK 四位成員將再次聚首拍攝真人秀，預計年底在Netflix播出。",
-    url: "https://www.netflix.com/title/blackpink-house-2-reality-show-2025",
+    url: "https://www.soompi.com/article/1628405wpp/blackpink-house-2-reality-show-confirmed-netflix-2025",
     tags: ["BLACKPINK", "綜藝節目", "Netflix"],
     category: "variety",
-    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=250&fit=crop&auto=format&q=80"
   }
 ];
 
@@ -265,7 +265,6 @@ app.get('/', (req, res) => {
                 text-decoration: none;
                 font-weight: 500;
                 transition: color 0.3s ease;
-                cursor: pointer;
             }
             
             .nav-link:hover,
@@ -290,74 +289,6 @@ app.get('/', (req, res) => {
             .search-icon:hover,
             .menu-icon:hover {
                 opacity: 0.7;
-            }
-
-            /* Mobile Menu */
-            .mobile-menu {
-                display: none;
-                position: fixed;
-                top: 0;
-                right: -300px;
-                width: 300px;
-                height: 100vh;
-                background: white;
-                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-                transition: right 0.3s ease;
-                z-index: 2000;
-                padding: 2rem;
-            }
-
-            .mobile-menu.active {
-                right: 0;
-            }
-
-            .mobile-menu-header {
-                display: flex;
-                justify-content: between;
-                align-items: center;
-                margin-bottom: 2rem;
-            }
-
-            .close-menu {
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                cursor: pointer;
-                margin-left: auto;
-            }
-
-            .mobile-nav-links {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .mobile-nav-link {
-                color: #374151;
-                text-decoration: none;
-                font-weight: 500;
-                padding: 1rem;
-                border-radius: 8px;
-                transition: background 0.3s ease;
-            }
-
-            .mobile-nav-link:hover {
-                background: #f3f4f6;
-            }
-
-            .menu-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0,0,0,0.5);
-                z-index: 1500;
-            }
-
-            .menu-overlay.active {
-                display: block;
             }
             
             /* Search Bar */
@@ -747,23 +678,6 @@ app.get('/', (req, res) => {
         </style>
     </head>
     <body>
-        <!-- Mobile Menu Overlay -->
-        <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-header">
-                <span style="font-weight: 600; color: #1f2937;">選單</span>
-                <button class="close-menu" onclick="closeMobileMenu()">×</button>
-            </div>
-            <nav class="mobile-nav-links">
-                <a href="#" class="mobile-nav-link" onclick="showSection('home')">🏠 首頁</a>
-                <a href="#" class="mobile-nav-link" onclick="showSection('latest')">📰 最新</a>
-                <a href="#" class="mobile-nav-link" onclick="showSection('hot')">🔥 熱門</a>
-                <a href="#" class="mobile-nav-link" onclick="showSection('categories')">📂 分類</a>
-            </nav>
-        </div>
-
         <!-- Header -->
         <header class="header">
             <div class="header-container">
@@ -775,17 +689,17 @@ app.get('/', (req, res) => {
                 </div>
                 
                 <nav class="nav-links">
-                    <a href="#" class="nav-link active" onclick="showSection('home')">首頁</a>
-                    <a href="#" class="nav-link" onclick="showSection('latest')">最新</a>
-                    <a href="#" class="nav-link" onclick="showSection('hot')">熱門</a>
-                    <a href="#" class="nav-link" onclick="showSection('categories')">分類</a>
+                    <a href="#" class="nav-link active">首頁</a>
+                    <a href="#" class="nav-link">最新</a>
+                    <a href="#" class="nav-link">熱門</a>
+                    <a href="#" class="nav-link">分類</a>
                 </nav>
                 
                 <div class="header-actions">
                     <svg class="search-icon" onclick="toggleSearch()" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l5.387 5.387a1 1 0 01-1.414 1.414l-5.387-5.387zM8 14A6 6 0 108 2a6 6 0 000 12z" clip-rule="evenodd"/>
                     </svg>
-                    <svg class="menu-icon" onclick="openMobileMenu()" viewBox="0 0 20 20" fill="currentColor">
+                    <svg class="menu-icon" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
                     </svg>
                 </div>
@@ -889,91 +803,6 @@ app.get('/', (req, res) => {
         <script>
             // 全局變數
             const mockNewsLength = ${mockNews.length};
-            let currentSection = 'home';
-            
-            // 手機選單功能
-            function openMobileMenu() {
-                document.getElementById('mobileMenu').classList.add('active');
-                document.getElementById('menuOverlay').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-            
-            function closeMobileMenu() {
-                document.getElementById('mobileMenu').classList.remove('active');
-                document.getElementById('menuOverlay').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            // 頁面切換功能
-            function showSection(section) {
-                // 更新導航按鈕狀態
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                
-                // 找到對應的導航鏈接並激活
-                const navLinks = document.querySelectorAll('.nav-link');
-                const sections = ['home', 'latest', 'hot', 'categories'];
-                const index = sections.indexOf(section);
-                if (index !== -1 && navLinks[index]) {
-                    navLinks[index].classList.add('active');
-                }
-
-                currentSection = section;
-                
-                // 根據選擇的部分執行相應操作
-                switch(section) {
-                    case 'home':
-                        resetToHome();
-                        break;
-                    case 'latest':
-                        showLatestNews();
-                        break;
-                    case 'hot':
-                        showHotNews();
-                        break;
-                    case 'categories':
-                        showCategoriesView();
-                        break;
-                }
-                
-                closeMobileMenu();
-            }
-
-            // 顯示最新新聞
-            function showLatestNews() {
-                const cards = document.querySelectorAll('.news-card');
-                cards.forEach((card, index) => {
-                    card.style.display = index < 6 ? 'block' : 'none';
-                });
-                
-                document.querySelector('.section-title').innerHTML = '📰 Latest News';
-                window.scrollTo({ top: 400, behavior: 'smooth' });
-            }
-
-            // 顯示熱門新聞
-            function showHotNews() {
-                const cards = document.querySelectorAll('.news-card');
-                cards.forEach((card, index) => {
-                    card.style.display = index < 3 ? 'block' : 'none';
-                });
-                
-                document.querySelector('.section-title').innerHTML = '🔥 Hot Topics';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
-            // 顯示分類視圖
-            function showCategoriesView() {
-                document.querySelector('.section-title').innerHTML = '📂 Categories';
-                window.scrollTo({ top: 200, behavior: 'smooth' });
-                
-                // 突出顯示分類區域
-                const categoriesContainer = document.querySelector('.categories-container');
-                categoriesContainer.style.background = '#f0f9ff';
-                setTimeout(() => {
-                    categoriesContainer.style.background = '';
-                }, 2000);
-            }
             
             // 切換搜尋框
             function toggleSearch() {
@@ -997,7 +826,6 @@ app.get('/', (req, res) => {
                 
                 const query = searchInput.value.toLowerCase();
                 const cards = document.querySelectorAll('.news-card, .sidebar-card');
-                let foundCount = 0;
                 
                 cards.forEach(card => {
                     const title = card.querySelector('.news-title, .sidebar-title');
@@ -1010,51 +838,38 @@ app.get('/', (req, res) => {
                     
                     if (titleText.includes(query) || tagsText.includes(query) || sourceText.includes(query)) {
                         card.style.display = 'block';
-                        foundCount++;
                     } else {
                         card.style.display = query ? 'none' : 'block';
                     }
                 });
                 
-                if (query && foundCount > 0) {
-                    document.querySelector('.section-title').innerHTML = '🔍 搜尋結果 (' + foundCount + ' 則)';
-                }
-                
                 // 隱藏搜尋框
                 toggleSearch();
             }
             
-            // 分類篩選 - 修復版本
+            // 分類篩選
             function filterByCategory(categoryId) {
                 // 更新按鈕狀態
                 document.querySelectorAll('.category-tag').forEach(tag => {
                     tag.classList.remove('active');
                 });
                 
-                // 激活點擊的分類
-                event.target.classList.add('active');
+                // 找到被點擊的元素並激活
+                const clickedElement = event ? event.target : document.querySelector('.category-tag[onclick*="' + categoryId + '"]');
+                if (clickedElement) {
+                    clickedElement.classList.add('active');
+                }
                 
-                // 篩選新聞卡片
+                // 篩選新聞
                 const cards = document.querySelectorAll('.news-card');
-                let visibleCount = 0;
-                
                 cards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (categoryId === 'all' || cardCategory === categoryId) {
                         card.style.display = 'block';
-                        visibleCount++;
                     } else {
                         card.style.display = 'none';
                     }
                 });
-
-                // 更新標題
-                const categoryName = categoryId === 'all' ? '全部新聞' : 
-                    document.querySelector('[onclick="filterByCategory(\'' + categoryId + '\')"]').textContent;
-                document.querySelector('.section-title').innerHTML = '📂 ' + categoryName + ' (' + visibleCount + ' 則)';
-                
-                // 滾動到新聞區域
-                window.scrollTo({ top: 400, behavior: 'smooth' });
             }
             
             // 重置到首頁
@@ -1064,95 +879,27 @@ app.get('/', (req, res) => {
                     searchInput.value = '';
                 }
                 
-                // 重置分類按鈕
                 document.querySelectorAll('.category-tag').forEach(tag => {
                     tag.classList.remove('active');
                 });
-                document.querySelector('.category-tag').classList.add('active');
                 
-                // 顯示所有卡片
+                const firstCategory = document.querySelector('.category-tag');
+                if (firstCategory) {
+                    firstCategory.classList.add('active');
+                }
+                
                 document.querySelectorAll('.news-card, .sidebar-card').forEach(card => {
                     card.style.display = 'block';
                 });
                 
-                // 重置標題
-                document.querySelector('.section-title').innerHTML = '📰 Latest News';
-                
-                // 滾動到頂部
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                
-                currentSection = 'home';
             }
             
-            // 開啟新聞連結 - 改善版本
+            // 開啟新聞連結
             function openNewsLink(url) {
-                if (url && url.startsWith('http')) {
-                    try {
-                        // 顯示載入提示
-                        const loadingToast = document.createElement('div');
-                        loadingToast.style.cssText = `
-                            position: fixed; top: 20px; right: 20px; z-index: 9999;
-                            background: #3b82f6; color: white; padding: 12px 20px;
-                            border-radius: 8px; font-size: 14px; font-weight: 500;
-                            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                            transition: all 0.3s ease;
-                        `;
-                        loadingToast.textContent = '正在開啟新聞...';
-                        document.body.appendChild(loadingToast);
-                        
-                        // 在新標籤頁打開連結
-                        const link = document.createElement('a');
-                        link.href = url;
-                        link.target = '_blank';
-                        link.rel = 'noopener noreferrer';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        
-                        // 移除載入提示
-                        setTimeout(() => {
-                            if (loadingToast.parentNode) {
-                                loadingToast.style.opacity = '0';
-                                setTimeout(() => {
-                                    document.body.removeChild(loadingToast);
-                                }, 300);
-                            }
-                        }, 1500);
-                        
-                    } catch (error) {
-                        console.error('開啟連結時發生錯誤:', error);
-                        showNotification('無法開啟此新聞連結，請稍後再試。', 'error');
-                    }
-                } else {
-                    console.log('無效的連結:', url);
-                    showNotification('此新聞連結暫時無法使用。', 'warning');
+                if (url) {
+                    window.open(url, '_blank');
                 }
-            }
-            
-            // 通知函數
-            function showNotification(message, type = 'info') {
-                const notification = document.createElement('div');
-                const bgColor = type === 'error' ? '#ef4444' : type === 'warning' ? '#f59e0b' : '#3b82f6';
-                notification.style.cssText = `
-                    position: fixed; top: 20px; right: 20px; z-index: 9999;
-                    background: ${bgColor}; color: white; padding: 12px 20px;
-                    border-radius: 8px; font-size: 14px; font-weight: 500;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                    max-width: 300px; word-wrap: break-word;
-                    animation: slideIn 0.3s ease;
-                `;
-                notification.textContent = message;
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.style.opacity = '0';
-                    notification.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            document.body.removeChild(notification);
-                        }
-                    }, 300);
-                }, 3000);
             }
             
             // 事件監聽器設置
@@ -1168,7 +915,6 @@ app.get('/', (req, res) => {
                         if (searchContainer) {
                             searchContainer.style.display = 'none';
                         }
-                        closeMobileMenu();
                     }
                 });
                 
@@ -1188,14 +934,12 @@ app.get('/', (req, res) => {
                 console.log('🎵 韓流新聞聚合器已載入');
                 console.log('📰 共載入 ' + mockNewsLength + ' 則新聞');
                 console.log('🔥 精選新聞: 1 則, 最新新聞: ' + (mockNewsLength - 1) + ' 則');
-                console.log('✅ 所有功能已修復並優化');
                 
                 // 設置事件監聽器
                 setupEventListeners();
                 
-                // 預載圖片
-                const images = document.querySelectorAll('[style*="background-image"]');
-                console.log('📷 開始預載 ' + images.length + ' 張圖片');
+                // 測試按鈕功能
+                console.log('✅ JavaScript 功能已初始化');
             });
         </script>
     </body>
@@ -1203,7 +947,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-// API endpoints - 保持不變
+// API endpoints
 app.get('/api/articles', (req, res) => {
   const { category, search } = req.query;
   let filteredNews = mockNews;
@@ -1244,28 +988,19 @@ app.get('/api/health', (req, res) => {
     status: '正常', 
     timestamp: new Date().toISOString(),
     service: 'News Portal | 韓流新聞聚合器',
-    version: '3.1.0',
+    version: '3.0.0',
     totalNews: mockNews.length,
     categories: categories.length,
-    featured: mockNews.filter(n => n.featured).length,
-    improvements: [
-      '修復新聞連結功能',
-      '添加相關K-pop圖片',
-      '實現手機選單',
-      '修復分類切換',
-      '改善頁面互動'
-    ]
+    featured: mockNews.filter(n => n.featured).length
   });
 });
 
 app.listen(PORT, () => {
   console.log(`🎵 News Portal 運行在端口 ${PORT}`);
   console.log('✅ 現代新聞門戶介面就緒');
-  console.log('✅ 所有功能已修復和優化'); 
-  console.log('✅ 新聞連結修復完成');
+  console.log('✅ 完全重新設計的UI'); 
+  console.log('✅ 完整數據已載入');
   console.log(`📰 總共 ${mockNews.length} 則新聞`);
   console.log(`🏷️ ${categories.length} 個分類`);
   console.log('🔥 精選新聞系統啟用');
-  console.log('📱 手機選單功能啟用');
-  console.log('🎯 分類篩選功能優化');
 });
