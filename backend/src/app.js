@@ -69,26 +69,33 @@ app.use((req, res) => {
 // 初始化應用
 async function initializeApp() {
   try {
-    // 初始化資料庫
-    console.log('Initializing database...');
-    const database = new Database();
-    await database.initialize();
-    
-    // 設置 Database 實例到單例模式
-    Database.instance = database;
+    if (!process.env.SKIP_DB_INIT) {
+      // 初始化資料庫
+      console.log('Initializing database...');
+      const database = new Database();
+      await database.initialize();
+      
+      // 設置 Database 實例到單例模式
+      Database.instance = database;
 
-    // 初始化 RSS 聚合器
-    console.log('Initializing RSS aggregator...');
-    const aggregator = new RSSAggregator();
-    await aggregator.initializeDefaultSources();
-    
-    // 開始定期聚合 (每 30 分鐘)
-    aggregator.startPeriodicAggregation(30);
+      // 初始化 RSS 聚合器
+      console.log('Initializing RSS aggregator...');
+      const aggregator = new RSSAggregator();
+      await aggregator.initializeDefaultSources();
+      
+      // 開始定期聚合 (每 30 分鐘)
+      aggregator.startPeriodicAggregation(30);
+    } else {
+      console.log('Database initialization skipped');
+    }
 
     console.log('Application initialized successfully');
   } catch (error) {
     console.error('Failed to initialize application:', error);
-    process.exit(1);
+    // Don't exit on init error in production
+    if (process.env.NODE_ENV !== 'production') {
+      process.exit(1);
+    }
   }
 }
 
