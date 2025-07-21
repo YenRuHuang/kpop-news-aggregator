@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.static('public'));
 
-// 韓流新聞數據 (2025年6月-7月)
+// 韓流新聞數據 (2025年6月-7月) - 使用真實可用連結
 const mockNews = [
   {
     id: 1,
@@ -14,7 +14,7 @@ const mockNews = [
     source: "韓流新聞網",
     publishedAt: "2025-07-24T10:00:00Z",
     summary: "女團 NewJeans 正式宣布將於8月回歸，新專輯預計將帶來全新音樂風格，粉絲期待已久...",
-    url: "https://soompi.com/article/1634289wpp/newjeans-announces-comeback",
+    url: "https://www.soompi.com",
     tags: ["NewJeans", "回歸", "專輯"]
   },
   {
@@ -23,7 +23,7 @@ const mockNews = [
     source: "AllKPop 中文版",
     publishedAt: "2025-07-23T14:30:00Z",
     summary: "BTS 成員 Jin 個人專輯首支預告片正式釋出，展現成熟音樂風格，預計8月發行...",
-    url: "https://allkpop.com/article/2025/07/bts-jin-releases-teaser",
+    url: "https://www.allkpop.com",
     tags: ["BTS", "Jin", "個人專輯"]
   },
   {
@@ -32,7 +32,7 @@ const mockNews = [
     source: "韓流時尚",
     publishedAt: "2025-07-22T16:15:00Z",
     summary: "BLACKPINK Lisa 作為品牌大使出席巴黎時裝週，造型獲得國際媒體盛讚...",
-    url: "https://vogue.com/lisa-paris-fashion-week",
+    url: "https://www.vogue.com",
     tags: ["BLACKPINK", "Lisa", "時裝週"]
   },
   {
@@ -41,7 +41,7 @@ const mockNews = [
     source: "韓流速報",
     publishedAt: "2025-07-21T11:45:00Z",
     summary: "SM 娛樂女團 aespa 世界巡演台北站門票今日開售，預計將在小巨蛋舉辦兩場演出...",
-    url: "https://ticketmaster.tw/aespa-taipei",
+    url: "https://www.ticketmaster.tw",
     tags: ["aespa", "演唱會", "台北"]
   },
   {
@@ -50,7 +50,7 @@ const mockNews = [
     source: "音樂榜單",
     publishedAt: "2025-07-20T09:30:00Z",
     summary: "SEVENTEEN 最新單曲《God of Music》發行後立即登上多國音樂榜單冠軍...",
-    url: "https://billboard.com/seventeen-god-of-music",
+    url: "https://www.billboard.com",
     tags: ["SEVENTEEN", "新歌", "榜單"]
   },
   {
@@ -59,7 +59,7 @@ const mockNews = [
     source: "日韓娛樂",
     publishedAt: "2025-07-19T13:20:00Z",
     summary: "新生代女團 IVE 日本出道單曲銷量正式突破百萬張，創下第四代女團新紀錄...",
-    url: "https://oricon.co.jp/ive-million-sales",
+    url: "https://www.oricon.co.jp",
     tags: ["IVE", "日本", "銷量紀錄"]
   },
   {
@@ -68,7 +68,7 @@ const mockNews = [
     source: "韓流新聞網",
     publishedAt: "2025-07-18T15:45:00Z",
     summary: "(G)I-DLE 即將回歸的新專輯概念照正式公開，展現神秘黑暗風格...",
-    url: "https://soompi.com/gidle-concept-photos",
+    url: "https://www.soompi.com",
     tags: ["(G)I-DLE", "回歸", "概念照"]
   },
   {
@@ -77,7 +77,7 @@ const mockNews = [
     source: "海外韓流",
     publishedAt: "2025-07-17T12:00:00Z",
     summary: "JYP 娛樂女團 ITZY 美國巡演圓滿結束，在洛杉磯、紐約等地獲得熱烈迴響...",
-    url: "https://variety.com/itzy-us-tour-success",
+    url: "https://variety.com",
     tags: ["ITZY", "美國巡演", "海外活動"]
   },
   {
@@ -86,7 +86,7 @@ const mockNews = [
     source: "日韓音樂",
     publishedAt: "2025-07-16T10:30:00Z",
     summary: "TWICE 即將發行的日本新單曲預購數量創下個人最高紀錄，展現持續影響力...",
-    url: "https://tower.jp/twice-new-single",
+    url: "https://tower.jp",
     tags: ["TWICE", "日本單曲", "預購"]
   },
   {
@@ -95,7 +95,7 @@ const mockNews = [
     source: "時尚雜誌",
     publishedAt: "2025-07-15T14:15:00Z",
     summary: "Red Velvet 成員 Joy 為知名時尚雜誌拍攝個人畫報，展現多樣魅力...",
-    url: "https://elle.co.kr/red-velvet-joy-photoshoot",
+    url: "https://www.elle.com",
     tags: ["Red Velvet", "Joy", "畫報"]
   },
   {
@@ -104,7 +104,7 @@ const mockNews = [
     source: "音樂銷售",
     publishedAt: "2025-07-14T11:20:00Z",
     summary: "ENHYPEN 最新專輯發行首週銷量突破200萬張，再次證明第四代男團實力...",
-    url: "https://hanteo.com/enhypen-album-sales",
+    url: "https://www.hanteo.com",
     tags: ["ENHYPEN", "專輯銷量", "紀錄"]
   },
   {
@@ -113,7 +113,7 @@ const mockNews = [
     source: "美國娛樂",
     publishedAt: "2025-07-13T16:45:00Z",
     summary: "LE SSERAFIM 在美國知名電視節目表演獲得媒體和觀眾一致好評...",
-    url: "https://ew.com/le-sserafim-tv-performance",
+    url: "https://ew.com",
     tags: ["LE SSERAFIM", "美國", "電視表演"]
   },
   {
@@ -122,7 +122,7 @@ const mockNews = [
     source: "YouTube 官方",
     publishedAt: "2025-07-12T13:30:00Z",
     summary: "STRAY KIDS 最新 MV 在 YouTube 上的觀看次數正式突破一億次...",
-    url: "https://youtube.com/watch?v=straykids-mv",
+    url: "https://www.youtube.com",
     tags: ["STRAY KIDS", "MV", "YouTube"]
   },
   {
@@ -131,7 +131,7 @@ const mockNews = [
     source: "頒獎典禮",
     publishedAt: "2025-07-11T18:00:00Z",
     summary: "女團 NewJeans 憑藉在電影配樂方面的貢獻獲得青龍電影獎特別獎項...",
-    url: "https://bluedragon-awards.com/newjeans-award",
+    url: "https://www.koreaherald.com",
     tags: ["NewJeans", "獎項", "電影配樂"]
   },
   {
@@ -140,7 +140,7 @@ const mockNews = [
     source: "綜藝消息",
     publishedAt: "2025-07-10T12:45:00Z",
     summary: "BLACKPINK 四位成員將合體出演全新綜藝節目，預計年底播出...",
-    url: "https://tvn.co.kr/blackpink-variety-show",
+    url: "https://www.soompi.com",
     tags: ["BLACKPINK", "綜藝節目", "團體活動"]
   },
   {
@@ -149,7 +149,7 @@ const mockNews = [
     source: "藝術文化",
     publishedAt: "2025-07-09T15:20:00Z",
     summary: "BTS 隊長 RM 個人藝術收藏展在首爾現代美術館正式開幕，展現藝術品味...",
-    url: "https://mmca.go.kr/rm-art-exhibition",
+    url: "https://www.koreaherald.com",
     tags: ["BTS", "RM", "美術展覽"]
   },
   {
@@ -158,7 +158,7 @@ const mockNews = [
     source: "音樂劇界",
     publishedAt: "2025-07-08T10:15:00Z",
     summary: "SEVENTEEN 成員 DK 確定主演音樂劇《Xcalibur》，展現音樂劇實力...",
-    url: "https://musical.co.kr/seventeen-dk-xcalibur",
+    url: "https://www.allkpop.com",
     tags: ["SEVENTEEN", "DK", "音樂劇"]
   },
   {
@@ -167,7 +167,7 @@ const mockNews = [
     source: "韓流經典",
     publishedAt: "2025-07-07T14:30:00Z",
     summary: "少女時代慶祝出道16週年，成員們透過社群媒體分享珍貴回憶...",
-    url: "https://soshified.com/16th-anniversary",
+    url: "https://www.soompi.com",
     tags: ["少女時代", "出道週年", "紀念"]
   }
 ];
